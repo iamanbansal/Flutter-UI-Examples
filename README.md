@@ -2,6 +2,12 @@
 
 Flutter UI application
 
+## Story
+<img width="250" alt='story' src='https://github.com/aman210697/Flutter-UI-Examples/blob/master/gif/Story.gif'/>
+
+## Shoes Shop
+<img width="250" alt='shoe_shop' src='https://github.com/aman210697/Flutter-UI-Examples/blob/master/gif/ShoeShop.gif'/>
+
 ## Getting Started
 
 This project is a starting point for a Flutter application.
