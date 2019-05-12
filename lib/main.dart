@@ -2,8 +2,7 @@ import 'package:flutter/material.dart';
 import './FlutterStroy/main.dart';
 import 'ShoesShop/main.dart';
 import 'ListItem.dart';
-import 'ShoesShop/product_details.dart';
-import 'ListItem.dart';
+import 'pizza_store/main.dart';
 
 void main() => runApp(MyApp());
 
@@ -20,7 +19,8 @@ class MyApp extends StatelessWidget {
         home: MyHomePage(title: 'UI List'),
         routes: {
           'story': (context) => FlutterStory(),
-          'shoe_shop': (context) => ShoesShop()
+          'shoe_shop': (context) => ShoesShop(),
+          'pizza_store':(context)=> PizzaStore()
         });
   }
 }

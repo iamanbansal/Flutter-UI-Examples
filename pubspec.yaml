@@ -20,6 +20,8 @@ dependencies:
   flutter:
     sdk: flutter
 
+  flutter_statusbarcolor: ^0.2.0  
+
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^0.1.2
@@ -27,6 +29,8 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  build_web_compilers: ^2.0.0
+
 
 
 # For information on the generic Dart part of this file, see the
@@ -54,6 +58,12 @@ flutter:
    - assets/shoesShop/360.png
    - assets/shoesShop/adidas.png
    - assets/shoesShop/cart.png
+   - assets/pizza_store/pizza.png
+   - assets/pizza_store/sweet_and_tangy.png
+   - assets/pizza_store/african_peri_peri.png
+   - assets/pizza_store/aussie_barbeque_veg.png
+   - assets/pizza_store/indi_tandoori_paneer.png
+   - assets/pizza_store/jamaican_jerk_veg.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.io/assets-and-images/#resolution-aware.
@@ -94,6 +104,10 @@ flutter:
     - family: CustomIcon
       fonts:
       - asset: assets/shoesShop/CustomIcon.ttf
+
+    - family : slabo
+      fonts:
+      - asset: assets/pizza_store/slabo.ttf
 
   # For details regarding fonts from package dependencies,
   # see https://flutter.io/custom-fonts/#from-packages

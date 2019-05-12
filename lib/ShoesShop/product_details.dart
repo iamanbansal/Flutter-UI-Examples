@@ -1,34 +1,25 @@
 import 'package:flutter/material.dart';
-import 'utils.dart';
+import 'package:flutter_ui/utils.dart';
 import 'data.dart';
 import 'main.dart';
 
 Shoe shoeDetails;
-class ProductDetails extends StatelessWidget {
 
-ProductDetails(Shoe shoe){
-  shoeDetails=shoe;
-}
+class ProductDetails extends StatelessWidget {
+  ProductDetails(Shoe shoe) {
+    shoeDetails = shoe;
+  }
 
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: MyApp(),
-      debugShowCheckedModeBanner: false,
-    );
-  }
-}
-
-class MyApp extends StatefulWidget {
-  @override
-  _MyAppState createState() => new _MyAppState();
-}
-
-class _MyAppState extends State<MyApp> {
-  @override
-  Widget build(BuildContext context) {
-    return Container(
+    return WillPopScope(
+      onWillPop: () {
+        print("on back pressed");
+        Navigator.pop(context);
+        return Future.value(true);
+      },
+      child: Container(
         width: double.infinity,
         decoration: BoxDecoration(
             gradient: LinearGradient(
@@ -37,46 +28,107 @@ class _MyAppState extends State<MyApp> {
                 end: Alignment.bottomCenter,
                 tileMode: TileMode.clamp)),
         child: Scaffold(
+          backgroundColor: Colors.transparent,
+          appBar: AppBar(
             backgroundColor: Colors.transparent,
-            appBar: AppBar(
-              backgroundColor: Colors.transparent,
-              elevation: 0.0,
-              leading: IconButton(
-                icon: Icon(
-                  Icons.arrow_back,
-                  size: screenAwareSize(20.0, context),
-                ),
-                onPressed: () {
-                  Navigator.pop(context);
-                },
+            elevation: 0.0,
+            leading: IconButton(
+              icon: Icon(
+                Icons.arrow_back,
+                size: screenAwareSize(20.0, context),
               ),
-              title: Text(shoeDetails.title,
-                  style: TextStyle(
-                      color: Colors.white,
-                      fontSize: screenAwareSize(18.0, context),
-                      fontFamily: "Helvetica")),
-              centerTitle: true,
-              actions: <Widget>[
-                IconButton(
-                  icon: Icon(
-                    Icons.favorite_border,
-                    size: screenAwareSize(20.0, context),
+              onPressed: () {
+                Navigator.pop(context);
+              },
+            ),
+            title: Text(shoeDetails.title,
+                style: TextStyle(
                     color: Colors.white,
-                  ),
-                  onPressed: () {},
-                )
+                    fontSize: screenAwareSize(18.0, context),
+                    fontFamily: "Helvetica")),
+            centerTitle: true,
+            actions: <Widget>[
+              IconButton(
+                icon: Icon(
+                  Icons.favorite_border,
+                  size: screenAwareSize(20.0, context),
+                  color: Colors.white,
+                ),
+                onPressed: () {},
+              )
+            ],
+          ),
+          body: SingleChildScrollView(
+            child: Column(
+              children: <Widget>[
+                ProductScreenTopPart(),
+                ProductScreenBottomPart()
               ],
             ),
-            body: SingleChildScrollView(
-              child: Column(
-                children: <Widget>[
-                  ProductScreenTopPart(),
-                  ProductScreenBottomPart()
-                ],
-              ),
-            )));
+          ),
+        ),
+      ),
+    );
   }
 }
+
+// class MyApp extends StatefulWidget {
+//   @override
+//   _MyAppState createState() => new _MyAppState();
+// }
+
+// class _MyAppState extends State<MyApp> {
+//   @override
+//   Widget build(BuildContext context) {
+//     return Container(
+//         width: double.infinity,
+//         decoration: BoxDecoration(
+//             gradient: LinearGradient(
+//                 colors: [Color(0xFF696D77), Color(0xFF292C36)],
+//                 begin: Alignment.topCenter,
+//                 end: Alignment.bottomCenter,
+//                 tileMode: TileMode.clamp)),
+//         child: Scaffold(
+//             backgroundColor: Colors.transparent,
+//             appBar: AppBar(
+//               backgroundColor: Colors.transparent,
+//               elevation: 0.0,
+//               leading: IconButton(
+//                 icon: Icon(
+//                   Icons.arrow_back,
+//                   size: screenAwareSize(20.0, context),
+//                 ),
+//                 onPressed: () {
+//                   Navigator.pop(context);
+//                 },
+//               ),
+//               title: Text(shoeDetails.title,
+//                   style: TextStyle(
+//                       color: Colors.white,
+//                       fontSize: screenAwareSize(18.0, context),
+//                       fontFamily: "Helvetica")),
+//               centerTitle: true,
+//               actions: <Widget>[
+//                 IconButton(
+//                   icon: Icon(
+//                     Icons.favorite_border,
+//                     size: screenAwareSize(20.0, context),
+//                     color: Colors.white,
+//                   ),
+//                   onPressed: () {},
+//                 )
+//               ],
+//             ),
+//             body: SingleChildScrollView(
+//               child: Column(
+//                 children: <Widget>[
+//                   ProductScreenTopPart(),
+//                   ProductScreenBottomPart()
+//                 ],
+//               ),
+//             )));
+//   }
+// }
 
 class ProductScreenTopPart extends StatefulWidget {
   @override
@@ -97,9 +149,9 @@ class _ProductScreenTopPartState extends State<ProductScreenTopPart> {
                 child: Hero(
                   tag: shoeDetails.title,
                   child: Image.asset(shoeDetails.imgUrl,
-                    width: double.infinity,
-                    height: double.infinity,
-                    fit: BoxFit.cover),
+                      width: double.infinity,
+                      height: double.infinity,
+                      fit: BoxFit.cover),
                 ),
               ),
               Padding(
@@ -402,8 +454,7 @@ class _ProductScreenBottomPartState extends State<ProductScreenBottomPart> {
             padding: EdgeInsets.only(left: screenAwareSize(20.0, context)),
             child: Text("Price",
                 style: TextStyle(
-                    color: Color(0xFF949598),
-                    fontFamily: "Helvetica")),
+                    color: Color(0xFF949598), fontFamily: "Helvetica")),
           ),
           Container(
             width: double.infinity,
@@ -422,7 +473,6 @@ class _ProductScreenBottomPartState extends State<ProductScreenBottomPart> {
                             left: screenAwareSize(18.0, context)),
                         child: Row(
                           children: <Widget>[
-                          
                             Text(shoeDetails.price,
                                 style: TextStyle(
                                     color: Colors.white,
@@ -495,8 +545,7 @@ Widget sizeItem(String size, bool isSelected, BuildContext context) {
           ]),
       child: Center(
         child: Text(size,
-            style:
-                TextStyle(color: Colors.white, fontFamily: "Helvetica")),
+            style: TextStyle(color: Colors.white, fontFamily: "Helvetica")),
       ),
     ),
   );
