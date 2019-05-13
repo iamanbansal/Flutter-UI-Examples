@@ -8,6 +8,10 @@ Flutter UI application
 ## Shoes Shop
 <img width="250" alt='shoe_shop' src='https://github.com/aman210697/Flutter-UI-Examples/blob/master/gif/ShoeShop.gif'/>
 
+## Pizza Store
+<img width="250" alt='shoe_shop' src='https://github.com/aman210697/Flutter-UI-Examples/blob/master/gif/Pizza_store.gif'/>
+
+
 ## Getting Started
 
 This project is a starting point for a Flutter application.
