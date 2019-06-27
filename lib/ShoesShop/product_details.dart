@@ -13,58 +13,51 @@ class ProductDetails extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return WillPopScope(
-      onWillPop: () {
-        print("on back pressed");
-        Navigator.pop(context);
-        return Future.value(true);
-      },
-      child: Container(
-        width: double.infinity,
-        decoration: BoxDecoration(
-            gradient: LinearGradient(
-                colors: [Color(0xFF696D77), Color(0xFF292C36)],
-                begin: Alignment.topCenter,
-                end: Alignment.bottomCenter,
-                tileMode: TileMode.clamp)),
-        child: Scaffold(
+    return Container(
+      width: double.infinity,
+      decoration: BoxDecoration(
+          gradient: LinearGradient(
+              colors: [Color(0xFF696D77), Color(0xFF292C36)],
+              begin: Alignment.topCenter,
+              end: Alignment.bottomCenter,
+              tileMode: TileMode.clamp)),
+      child: Scaffold(
+        backgroundColor: Colors.transparent,
+        appBar: AppBar(
           backgroundColor: Colors.transparent,
-          appBar: AppBar(
-            backgroundColor: Colors.transparent,
-            elevation: 0.0,
-            leading: IconButton(
-              icon: Icon(
-                Icons.arrow_back,
-                size: screenAwareSize(20.0, context),
-              ),
-              onPressed: () {
-                Navigator.pop(context);
-              },
+          elevation: 0.0,
+          leading: IconButton(
+            icon: Icon(
+              Icons.arrow_back,
+              size: screenAwareSize(20.0, context),
             ),
-            title: Text(shoeDetails.title,
-                style: TextStyle(
-                    color: Colors.white,
-                    fontSize: screenAwareSize(18.0, context),
-                    fontFamily: "Helvetica")),
-            centerTitle: true,
-            actions: <Widget>[
-              IconButton(
-                icon: Icon(
-                  Icons.favorite_border,
-                  size: screenAwareSize(20.0, context),
-                  color: Colors.white,
-                ),
-                onPressed: () {},
-              )
-            ],
+            onPressed: () {
+              Navigator.pop(context);
+            },
           ),
-          body: SingleChildScrollView(
-            child: Column(
-              children: <Widget>[
-                ProductScreenTopPart(),
-                ProductScreenBottomPart()
-              ],
-            ),
+          title: Text(shoeDetails.title,
+              style: TextStyle(
+                  color: Colors.white,
+                  fontSize: screenAwareSize(18.0, context),
+                  fontFamily: "Helvetica")),
+          centerTitle: true,
+          actions: <Widget>[
+            IconButton(
+              icon: Icon(
+                Icons.favorite_border,
+                size: screenAwareSize(20.0, context),
+                color: Colors.white,
+              ),
+              onPressed: () {},
+            )
+          ],
+        ),
+        body: SingleChildScrollView(
+          child: Column(
+            children: <Widget>[
+              ProductScreenTopPart(),
+              ProductScreenBottomPart()
+            ],
           ),
         ),
       ),

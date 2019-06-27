@@ -3,6 +3,7 @@ import './FlutterStroy/main.dart';
 import 'ShoesShop/main.dart';
 import 'ListItem.dart';
 import 'pizza_store/main.dart';
+import 'greenary/main.dart';
 
 void main() => runApp(MyApp());
 
@@ -20,7 +21,8 @@ class MyApp extends StatelessWidget {
         routes: {
           'story': (context) => FlutterStory(),
           'shoe_shop': (context) => ShoesShop(),
-          'pizza_store':(context)=> PizzaStore()
+          'pizza_store':(context)=> PizzaStore(),
+          'greenery':(context)=> GreeneryApp()
         });
   }
 }

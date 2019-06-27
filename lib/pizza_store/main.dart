@@ -10,12 +10,7 @@ class PizzaStore extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Pizza Store',
-      theme: ThemeData(primarySwatch: Colors.blueGrey, fontFamily: "slabo"),
-      home: PizzaHome(),
-    );
+    return PizzaHome();
   }
 }
 

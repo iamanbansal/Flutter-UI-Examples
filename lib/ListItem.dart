@@ -9,4 +9,5 @@ List<ListItem> uiList = [
   ListItem("Flutter Story",'story'),
   ListItem("Shoe Store",'shoe_shop'),
   ListItem("Pizza Store",'pizza_store'),
+  ListItem("Greenery App",'greenery'),
 ];
