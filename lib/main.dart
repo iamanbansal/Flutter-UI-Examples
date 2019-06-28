@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_ui/rent_car/main.dart';
 import './FlutterStroy/main.dart';
 import 'ShoesShop/main.dart';
 import 'ListItem.dart';
@@ -22,7 +23,8 @@ class MyApp extends StatelessWidget {
           'story': (context) => FlutterStory(),
           'shoe_shop': (context) => ShoesShop(),
           'pizza_store':(context)=> PizzaStore(),
-          'greenery':(context)=> GreeneryApp()
+          'greenery':(context)=> GreeneryApp(),
+          'rent_car':(context)=> RentCar()
         });
   }
 }
