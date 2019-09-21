@@ -11,4 +11,5 @@ List<ListItem> uiList = [
   ListItem("Pizza Store",'pizza_store'),
   ListItem("Greenery App",'greenery'),
   ListItem("Rent Car",'rent_car'),
+  ListItem("EverLance",'everlance'),
 ];

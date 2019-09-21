@@ -3,6 +3,7 @@ import 'package:flutter_ui/rent_car/main.dart';
 import './FlutterStroy/main.dart';
 import 'ShoesShop/main.dart';
 import 'ListItem.dart';
+import 'everlance/main.dart';
 import 'pizza_store/main.dart';
 import 'greenary/main.dart';
 
@@ -24,7 +25,8 @@ class MyApp extends StatelessWidget {
           'shoe_shop': (context) => ShoesShop(),
           'pizza_store':(context)=> PizzaStore(),
           'greenery':(context)=> GreeneryApp(),
-          'rent_car':(context)=> RentCar()
+          'rent_car':(context)=> RentCar(),
+          'everlance':(context)=> EverLance(),
         });
   }
 }
