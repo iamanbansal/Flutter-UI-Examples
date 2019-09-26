@@ -8,6 +8,8 @@ var violet3 = Color(0xFF7e57c2);
 var grey = Color(0xFFDCD8E7);
 
 class EverLance extends StatelessWidget {
+  static const routeName='everlance';
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

@@ -3,6 +3,8 @@ import 'CustomIcons.dart';
 import 'product_details.dart';
 
 class ShoesShop extends StatelessWidget {
+  static const routeName= 'shoe_shop';
+
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {

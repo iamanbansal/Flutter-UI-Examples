@@ -7,6 +7,9 @@ import 'pizza.dart';
 // void main() => runApp(PizzaStore());
 
 class PizzaStore extends StatelessWidget {
+  static const routeName= 'pizza_store';
+
+
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {

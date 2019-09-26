@@ -1,14 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_ui/rent_car/main.dart';
-import './FlutterStroy/main.dart';
 import 'ShoesShop/main.dart';
 import 'ListItem.dart';
 import 'everlance/main.dart';
+import 'flutter_stroy/main.dart';
 import 'pizza_store/main.dart';
 import 'greenary/main.dart';
 
 void main() => runApp(MyApp());
-
 
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
@@ -21,12 +20,12 @@ class MyApp extends StatelessWidget {
         ),
         home: MyHomePage(title: 'UI List'),
         routes: {
-          'story': (context) => FlutterStory(),
-          'shoe_shop': (context) => ShoesShop(),
-          'pizza_store':(context)=> PizzaStore(),
-          'greenery':(context)=> GreeneryApp(),
-          'rent_car':(context)=> RentCar(),
-          'everlance':(context)=> EverLance(),
+          FlutterStory.routeName: (context) => FlutterStory(),
+          ShoesShop.routeName: (context) => ShoesShop(),
+          PizzaStore.routeName: (context) => PizzaStore(),
+          GreeneryApp.routeName: (context) => GreeneryApp(),
+          RentCar.routeName: (context) => RentCar(),
+          EverLance.routeName: (context) => EverLance(),
         });
   }
 }
