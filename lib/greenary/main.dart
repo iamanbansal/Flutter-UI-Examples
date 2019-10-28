@@ -7,7 +7,7 @@ var productImage =
     'https://i.pinimg.com/originals/8f/bf/44/8fbf441fa92b29ebd0f324effbd4e616.png';
 
 class GreeneryApp extends StatelessWidget {
-  static const routeName='greenery';
+  static const routeName = 'greenery';
 
   @override
   Widget build(BuildContext context) {

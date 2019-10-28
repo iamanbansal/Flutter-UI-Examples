@@ -1,14 +1,15 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_ui/pizza_store/pizza_detail.dart';
 import 'package:flutter_ui/utils.dart';
-import 'dart:ui';
+
 import 'pizza.dart';
 
 // void main() => runApp(PizzaStore());
 
 class PizzaStore extends StatelessWidget {
-  static const routeName= 'pizza_store';
-
+  static const routeName = 'pizza_store';
 
   // This widget is the root of your application.
   @override
@@ -213,11 +214,8 @@ class ListOfPizzas extends StatelessWidget {
         GestureDetector(
           onTap: () {
             print(pizza.image);
-            Navigator.push(
-          
-                context,
-                MaterialPageRoute(
-                    builder: (context) => PizzaDetails(pizza)));
+            Navigator.push(context,
+                MaterialPageRoute(builder: (context) => PizzaDetails(pizza)));
           },
           child: Container(
             padding: EdgeInsets.symmetric(vertical: 35, horizontal: 20),
@@ -350,7 +348,6 @@ class BottomBar extends StatelessWidget {
                 Icons.store,
                 size: screenAwareSize(_size, context),
               ),
-             
             ),
             Container(
               height: screenAwareSize(_size, context),
@@ -360,7 +357,6 @@ class BottomBar extends StatelessWidget {
                 Icons.search,
                 size: screenAwareSize(_size, context),
               ),
-           
             ),
             Container(
               height: screenAwareSize(_size, context),
@@ -375,7 +371,6 @@ class BottomBar extends StatelessWidget {
                 color: Colors.white,
                 size: screenAwareSize(_size * 0.5, context),
               ),
-             
             ),
           ],
         ),

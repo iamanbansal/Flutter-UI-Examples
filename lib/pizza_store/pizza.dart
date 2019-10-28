@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 PizzaList pizzaList = PizzaList(pizzas: [
@@ -66,6 +65,7 @@ PizzaList pizzaList = PizzaList(pizzas: [
 
 class PizzaList {
   List<Pizza> pizzas;
+
   PizzaList({@required this.pizzas});
 }
 
@@ -85,6 +85,5 @@ class Pizza {
       @required this.name,
       @required this.starRating,
       @required this.desc,
-@required this.price});
+      @required this.price});
 }
-

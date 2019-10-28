@@ -40,7 +40,6 @@ CarList carList = CarList(cars: [
     {Icon(Icons.android, size: iconSize): "Android Auto"},
     {Icon(Icons.ac_unit, size: iconSize): "AC"},
   ]),
-
   Car(companyName: "Lamborghini", carName: "Aventador", price: 3000, imgList: [
     "lambo_front.png",
     "interior_lambo.png",

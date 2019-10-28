@@ -108,7 +108,7 @@ class DetailsScreen extends StatelessWidget {
                     decoration: BoxDecoration(
                         color: Color(0xff2c2731),
                         borderRadius:
-                        BorderRadius.only(topLeft: Radius.circular(48.0))),
+                            BorderRadius.only(topLeft: Radius.circular(48.0))),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
