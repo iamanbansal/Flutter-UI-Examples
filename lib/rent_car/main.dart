@@ -9,6 +9,8 @@ double minSheetTop;
 
 
 class RentCar extends StatelessWidget {
+  static const routeName='rent_car';
+
   @override
   Widget build(BuildContext context) {
     sheetTop= MediaQuery.of(context).size.height*0.8;

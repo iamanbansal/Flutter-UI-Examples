@@ -4,6 +4,8 @@ import 'data.dart';
 import 'dart:math';
 
 class FlutterStory extends StatelessWidget {
+  static const routeName= 'story';
+
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
