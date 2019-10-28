@@ -3,7 +3,7 @@ import 'CustomIcons.dart';
 import 'product_details.dart';
 
 class ShoesShop extends StatelessWidget {
-  static const routeName= 'shoe_shop';
+  static const routeName = 'shoe_shop';
 
   // This widget is the root of your application.
   @override
@@ -45,7 +45,7 @@ class _MyAppState extends State<MyApp> {
     return Scaffold(
       backgroundColor: Color(0xFF292C36),
       body: Padding(
-        padding: EdgeInsets.only(right: 10.0, left: 10.0,top: 15.0),
+        padding: EdgeInsets.only(right: 10.0, left: 10.0, top: 15.0),
         child: Column(
           children: <Widget>[
             Align(
@@ -72,7 +72,7 @@ class _MyAppState extends State<MyApp> {
         ),
       ),
       bottomNavigationBar: Padding(
-        padding: EdgeInsets.only(top: 8.0,bottom: 8.0),
+        padding: EdgeInsets.only(top: 8.0, bottom: 8.0),
         child: Container(
           decoration: BoxDecoration(color: Color(0xFF292C36), boxShadow: [
             BoxShadow(

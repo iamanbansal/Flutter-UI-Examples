@@ -1,27 +1,29 @@
-import 'package:flutter/material.dart';
-import 'car.dart';
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:flutter/material.dart';
 
+import 'car.dart';
 
 var currentCar = carList.cars[0];
 double sheetTop;
 double minSheetTop;
 
-
 class RentCar extends StatelessWidget {
-  static const routeName='rent_car';
+  static const routeName = 'rent_car';
 
   @override
   Widget build(BuildContext context) {
-    sheetTop= MediaQuery.of(context).size.height*0.8;
-    minSheetTop= MediaQuery.of(context).size.height*0.2;
+    sheetTop = MediaQuery.of(context).size.height * 0.8;
+    minSheetTop = MediaQuery.of(context).size.height * 0.2;
 
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         leading: Container(
           margin: EdgeInsets.only(left: 25),
-          child: Icon(Icons.arrow_back,color: Colors.white,),
+          child: Icon(
+            Icons.arrow_back,
+            color: Colors.white,
+          ),
         ),
         actions: <Widget>[
           Container(
@@ -39,7 +41,6 @@ class RentCar extends StatelessWidget {
 class LayoutStart extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-
     return Stack(
       children: <Widget>[
         CarDetailsAnimation(),
@@ -50,15 +51,12 @@ class LayoutStart extends StatelessWidget {
   }
 }
 
-
-
 class CarDetailsAnimation extends StatefulWidget {
   @override
   _CarDetailsAnimationState createState() => _CarDetailsAnimationState();
 }
 
 class _CarDetailsAnimationState extends State<CarDetailsAnimation> {
-
   @override
   Widget build(BuildContext context) {
     return CarDetails();
@@ -70,18 +68,18 @@ class CarDetails extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: <Widget>[
-            Container(
-              padding: EdgeInsets.only(left: 30),
-              child: _carTitle(),
-            ),
-            Container(
-              width: double.infinity,
-              child: CarCarousel(),
-            )
-          ],
-        ));
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: <Widget>[
+        Container(
+          padding: EdgeInsets.only(left: 30),
+          child: _carTitle(),
+        ),
+        Container(
+          width: double.infinity,
+          child: CarCarousel(),
+        )
+      ],
+    ));
   }
 
   _carTitle() {
@@ -183,10 +181,8 @@ class CustomBottomSheet extends StatefulWidget {
 
 class _CustomBottomSheetState extends State<CustomBottomSheet>
     with SingleTickerProviderStateMixin {
-
   Animation<double> animation;
   AnimationController controller;
-
 
   @override
   void initState() {
@@ -199,11 +195,9 @@ class _CustomBottomSheetState extends State<CustomBottomSheet>
       curve: Curves.easeInOut,
       reverseCurve: Curves.easeInOut,
     ))
-      ..addListener(() {
-        setState(() {
-
-        });
-      });
+          ..addListener(() {
+            setState(() {});
+          });
   }
 
   forwardAnimation() {
@@ -418,9 +412,9 @@ class ListItem extends StatelessWidget {
           mapVal.keys.elementAt(0),
           isMap
               ? Text(innerMap.keys.elementAt(0),
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                  color: Colors.black, letterSpacing: 1.2, fontSize: 11))
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                      color: Colors.black, letterSpacing: 1.2, fontSize: 11))
               : Container(),
           Text(
             innerMap.values.elementAt(0),

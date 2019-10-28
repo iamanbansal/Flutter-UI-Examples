@@ -1,7 +1,9 @@
-import 'package:flutter/material.dart';
 import 'dart:ui';
-import 'pizza.dart';
+
+import 'package:flutter/material.dart';
 import 'package:flutter_ui/utils.dart';
+
+import 'pizza.dart';
 
 class PizzaDetails extends StatelessWidget {
   final Pizza pizza;
@@ -203,7 +205,6 @@ class BackgroundArc extends StatelessWidget {
     return Container(
       height: screenAwareSize(300, context),
       width: screenAwareSize(300, context),
-
       decoration: BoxDecoration(
         color: background,
         borderRadius: BorderRadius.circular(300),
