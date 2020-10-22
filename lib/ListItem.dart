@@ -1,8 +1,10 @@
 import 'package:flutter_ui/ShoesShop/main.dart';
 import 'package:flutter_ui/everlance/main.dart';
 import 'package:flutter_ui/flutter_stroy/main.dart';
+import 'package:flutter_ui/furniture_store/main.dart';
 import 'package:flutter_ui/greenary/main.dart';
 import 'package:flutter_ui/pizza_store/main.dart';
+import 'package:flutter_ui/real_estate/home.dart';
 import 'package:flutter_ui/rent_car/main.dart';
 
 class ListItem {
@@ -18,4 +20,6 @@ List<ListItem> uiList = [
   ListItem("Greenery App", GreeneryApp.routeName),
   ListItem("Rent Car", RentCar.routeName),
   ListItem("EverLance", EverLance.routeName),
+  ListItem("Furniture Store", FurnitureStore.routeName),
+  ListItem("Real Estate", RealEstate.routeName),
 ];
